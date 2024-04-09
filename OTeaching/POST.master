@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="POST.master.cs" Inherits="POST" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="style.css" rel="stylesheet" />
+    <style>
+         #Image1{
+     width:672px;
+     position:relative;
+     height:113px;
+     right:-73px;
+ }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="top"> <asp:Image ID="Image1" runat="server" ImageUrl="~/kyt.png" />
+    
+    </div><div id="menu" style="position:sticky;z-index:1999;top:-21px;left:0;">
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Width="100%" 
+            BackColor="#006699" BorderColor="#3333FF" BorderStyle="Solid" BorderWidth="2px">
+            <Items>
+                <asp:MenuItem Text="HOME" Value="HOME" NavigateUrl="~/Default.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="REGISTRATION" Value="REGISTRATION" 
+                    NavigateUrl="~/Registartion.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="FEEDBACK" Value="FEEDBACK" NavigateUrl="~/Feedback.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="TOTAL STAFF" Value="STAFF REPORT" 
+                    NavigateUrl="~/StaffReport.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="NOTIFICATION" Value="DOWNLOAD" NavigateUrl="~/Notification.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="ADMIN" Value="LOGIN" NavigateUrl="~/Admin/Default.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="CONTACT US" Value="CONTACT US" 
+                    NavigateUrl="~/ContactUs.aspx"></asp:MenuItem>
+            </Items>
+            <StaticMenuItemStyle CssClass="smenu" />
+        </asp:Menu>
+    </div><div id="main" style="border:hidden">
+    <div id="left">
+  
+    </div>
+    <div id="right">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+         </div>
+       
+    </form>
+</body>
+</html>
